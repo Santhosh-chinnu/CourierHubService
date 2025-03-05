@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourierHub - Your Trusted Delivery Partner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-box-seam me-2"></i>
+                CourierHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shipments">Shipments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="contactlist">ContactList</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container py-5">
+        <h1 class="mb-4">Dashboard</h1>
+        
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary p-3 rounded-circle me-3">
+                                <i class="bi bi-box text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Active Shipments</h5>
+                        </div>
+                        <h2 class="mb-0">24</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success p-3 rounded-circle me-3">
+                                <i class="bi bi-truck text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Delivered Today</h5>
+                        </div>
+                        <h2 class="mb-0">156</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-info p-3 rounded-circle me-3">
+                                <i class="bi bi-people text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Active Customers</h5>
+                        </div>
+                        <h2 class="mb-0">1,204</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-warning p-3 rounded-circle me-3">
+                                <i class="bi bi-clock text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">Pending Orders</h5>
+                        </div>
+                        <h2 class="mb-0">13</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Shipments & Performance -->
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Recent Shipments</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Tracking No.</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>TRK123456</td>
+                                        <td>New York</td>
+                                        <td>Los Angeles</td>
+                                        <td><span class="badge bg-primary">In Transit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRK789012</td>
+                                        <td>Chicago</td>
+                                        <td>Houston</td>
+                                        <td><span class="badge bg-success">Delivered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRK345678</td>
+                                        <td>Miami</td>
+                                        <td>Seattle</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Performance</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <label class="form-label">On-Time Delivery</label>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 92%">92%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label">Customer Satisfaction</label>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 88%">88%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
